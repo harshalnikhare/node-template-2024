@@ -1,8 +1,8 @@
-export function add(a: number, b: number): number {
-  const obj = {
-    hello: "world",
-  };
+import config from "./config";
 
-  const c = 7;
+export function add(a: number, b: number): number {
+  if (config.appDebug) {
+    console.debug(`Calling add function with arguments ${a} and ${b}`);
+  }
   return a + b;
 }
